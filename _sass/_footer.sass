@@ -1,0 +1,93 @@
+.footer
+    // margin-bottom: 137px
+    .baner-content
+        position: relative
+        margin-top: 25px
+        .banner
+            background:
+                size: cover
+            height: 200px
+
+            .container
+                margin: -25px 0 0 0
+                display: flex
+                justify-content: center
+
+                .logo
+                    padding: 5px 0 0 0
+
+                    img
+                        +size(50px)
+
+            .title
+                position: relative
+                padding-top: 0px
+                text-align: center
+
+            .kicker
+                padding: 0 5px
+
+                .kicker-author
+                    padding-left: 20%
+
+.subscribe
+    z-index: -1
+    width: 100%
+    padding: 1% 0
+    background: black
+    // bottom: 44px
+    // position: fixed
+    .subscribe-banner
+        color: $white
+        padding: .5% 0
+    #mc-embedded-subscribe-form
+        padding: 2% 0
+        margin: 0 auto
+        display: inline-flex
+        justify-content: space-between
+        max-width: 450px
+
+        #mce-EMAIL
+            max-width: 60%
+            box-sizing: 10px 0
+
+
+.copyright
+    position: relative
+    background-color: black
+    padding: 1% 0
+    margin: 1% 0
+    border-top: 1px solid $gray
+    border-bottom: 1px solid $gray
+    p
+        color: $white
+        a
+            color: $white
+            text-decoration: none
+
+@media screen and (max-width: 640px)
+    .footer
+        .baner-content
+            .banner
+                .title
+                    padding-top: 0
+                    font-size: 95%
+                .kicker
+                    padding-top: 25px
+                    .kicker-author
+                        padding-top: 10px
+
+    #mc-embedded-subscribe-form
+        align-items: center
+        flex-direction: column
+
+        #mce-EMAIL
+            min-width: 80%
+            margin-bottom: 5px
+        [type="submit"]
+            width: 40%
+
+
+    .copyright
+        p
+            font-size: 100%

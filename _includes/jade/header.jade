@@ -1,0 +1,31 @@
+mixin nav-content()
+  .nav-links
+    a(href='/') home
+    | {% for page in site.pages %}
+    | {% if page.title %}
+    a(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
+        | {% endif %}
+    |{% endfor %}
+
+.mobile-nav.is-open
+  +nav-content()
+
+.header
+    .container
+        .logo
+          a(href="/")
+            img(src="{{ site.baseurl }}/assets/img/header/logo.png" alt="JTIDo")
+              
+        +nav-content()
+        
+        .mobile-nav-toggle: span
+          
+          
+
+.baner-content
+   .banner(style="background-image: url({{ site.baseurl }}/assets/img/header/58H.jpg)")
+        h1.title 
+          a(href='{{ site.baseurl }}/') {{ site.data.settings.title }}
+        em.kicker "There is no greater agony than bearing an untold story inside you."
+            p.kicker-author <br>
+                em - Maya Angelou

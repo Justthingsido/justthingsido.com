@@ -1,0 +1,9 @@
+
+<div class="sidebar-article-links">
+  <ul class="post-list">
+    <h2>More Articles</h2>{% for post in site.posts limit:10 %}
+    <li><span class="post-meta">{{ post.date | date: "%b %-d" }}  </span>
+      <h3><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h3>
+    </li>{% endfor %}
+  </ul>
+</div>

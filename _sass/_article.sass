@@ -1,0 +1,112 @@
+.article-container
+  text-align: left
+  display: flex
+  justify-content: center
+
+  .content
+    display: inline-flex
+    justify-content: center
+
+    .post
+      max-width: 900px
+
+    h2
+      text-align: center
+      width: 100%
+      margin: 25px 0
+      border-bottom: 1px solid $gray
+
+    p
+      display: block
+      margin-bottom: .5em
+
+    .post-meta
+      padding-bottom: 1em !important
+
+    // Article's page
+    .home
+      .page-heading
+        text-align: left
+      .post-list
+        list-style-type: none
+        text-align: left
+        .post-link
+          color: $white
+          padding-left: 20px
+          &:hover
+            color: rgba($white, 0.5)
+
+      .rss-subscribe
+        float: right
+
+        a
+          color: white
+          &:hover
+            color: rgba($white, 0.5)
+
+    .post-content
+      padding-bottom: 15px
+
+    .post-meta
+      text-align: left
+      color: $white
+
+    .post-navigation
+      display: flex
+      justify-content: space-between
+      width: 100%
+      padding: 10px 0
+      border-top: 1px solid $gray
+
+
+      a
+        color: white !important
+
+      .right,
+      .left
+        width: 50%
+        text-align: center
+
+        &:hover
+          a
+            color: #0074D9 !important
+            text-transform: uppercase
+
+
+    .share-links
+      display: flex
+      line-height: 1
+      padding-top: 15px
+      padding-bottom: 15px
+      justify-content: center
+      border-top: 1px solid $gray
+
+      .share
+        display: inline-flex
+        vertical-align: baseline
+
+        .hide-plus
+          display: none
+
+        .share-this
+          margin: auto
+          padding-right: 5px
+          font-weight: 700
+          color: $white
+          font-size: 20px
+
+          &:hover
+            color:  $gray
+
+          &:hover .hide-plus
+            display: flex
+
+
+    .comments-section
+      padding-top: 25px
+      border-top: 1px solid $gray
+
+@media screen and (max-width: 945px)
+  .article-container
+    .content
+      width: 100%

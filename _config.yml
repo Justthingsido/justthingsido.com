@@ -1,0 +1,25 @@
+#Personal
+name: Guillermo Remache
+email: guillermo@justthingsido.com
+
+analytics: UA-64098106-1
+
+# Site settings
+description: If there is something i have not done yet, then it is next on my list. If there is something I do not know, then that will be the next thing I learn.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "justthingsido.com" # the base hostname & protocol for your site
+twitter_username: GRemache93
+github_username:  justthingsido
+
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+encoding: utf-8
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+exclude: [node_modules, gulpfile.js, package.json, 'assets/css/main.sass']

@@ -1,0 +1,85 @@
+---
+layout: page
+title: Articles
+permalink: /articles/
+---
+
+<style type="text/css">
+.article-container .content .home .page-heading {
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.post-list {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+.post-list li {
+    max-width: 184.313px;
+    min-width: 184.313px;
+    padding: 20px 10px;
+}
+a {
+    color: white;
+    !important
+}
+.article-container .content .home .post-list .post-link {
+    padding-left: 0;
+}
+@media screen and (max-width: 640px) {
+    .post-list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0px
+    }
+    .post-list li {
+        width: 100%;
+        padding: 5px 0
+    }
+    .post-meta {
+        float: left;
+        padding-bottom: 0px
+    }
+    description {
+        text-align: left;
+    }
+}
+</style>
+
+<div class="home">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+      </li>
+    {% endfor %}
+  </ul>
+
+    <p class="rss-subscribe"> Subscribe  <a href="{{ "/feed.xml" | prepend: site.baseurl }}"> via RSS <img src="{{ site.baseurl }}/assets/img/feed-icon.png" alt="feed-icon" /> </a></p>
+</div>

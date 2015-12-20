@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="post">
+  <div class="post-header">
+    <h2 class="post-title">{{ page.title }}</h2>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}   </p>
+  </div>
+  <div class="post-content">
+
+    {{ content }}
+  </div>
+  <div class="post-navigation">
+    <div class="clear">&nbsp;</div>
+    <div class="left">{% if page.previous.url %}<a href="{{page.previous.url}}" title="Previous Post:      {{page.previous.title}}">&laquo; {{page.previous.title}}</a>        {% endif %}</div>
+    <div class="center-line">|        </div>
+    <div class="right">{% if page.next.url %}<a href="{{page.next.url}}" title="next Post:      {{page.next.title}}">{{page.next.title}} &raquo; </a>        {% endif %}</div>
+    <div class="clear">&nbsp;</div>
+  </div>
+  <div class="share-links">{% include jade/addons/share-buttons.html %}    </div>
+  <div class="comments-section">{% include jade/addons/disqus-comments.html %}</div>
+</div>
+<div class="sidebar">{% include sidebar.html %}</div>

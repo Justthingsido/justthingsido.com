@@ -1,0 +1,25 @@
+
+<div class="mobile-nav is-open">
+  <div class="nav-links"><a href="/">home</a>{% for page in site.pages %}
+    {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">
+      {{ page.title }}
+      {% endif %}</a>{% endfor %}
+  </div>
+</div>
+<div class="header">
+  <div class="container">
+    <div class="logo"><a href="/"><img src="{{ site.baseurl }}/assets/img/header/logo.png" alt="JTIDo"/></a></div>
+    <div class="nav-links"><a href="/">home</a>{% for page in site.pages %}
+      {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">
+        {{ page.title }}
+        {% endif %}</a>{% endfor %}
+    </div>
+    <div class="mobile-nav-toggle"><span></span></div>
+  </div>
+</div>
+<div class="baner-content">
+  <div style="background-image: url({{ site.baseurl }}/assets/img/header/58H.jpg)" class="banner">
+    <h1 class="title"> <a href="{{ site.baseurl }}/">{{ site.data.settings.title }}</a></h1><em class="kicker">"There is no greater agony than bearing an untold story inside you."
+      <p class="kicker-author"><br><em>- Maya Angelou</em></p></em>
+  </div>
+</div>

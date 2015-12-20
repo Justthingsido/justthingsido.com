@@ -1,0 +1,38 @@
+//output:../post.html
+.post
+  .post-header
+    h2.post-title{{ page.title }}
+    p.post-meta{{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}   
+
+  .post-content    
+    {{ content }}
+    
+  .post-navigation
+    .clear &nbsp;
+    |         
+    .left
+      | {% if page.previous.url %}
+      a(href='{{page.previous.url}}', title='Previous Post:\
+      {{page.previous.title}}') &laquo; {{page.previous.title}}
+      |         {% endif %}
+    .center-line |        
+    .right
+      | {% if page.next.url %}
+      a(href='{{page.next.url}}', title='next Post:\
+      {{page.next.title}}') {{page.next.title}} &raquo; 
+      |         {% endif %}
+    |         
+    .clear &nbsp;
+    
+    
+  .share-links
+    
+    {% include jade/addons/share-buttons.html %}    
+      
+  .comments-section
+
+    {% include jade/addons/disqus-comments.html %}
+    
+.sidebar
+  
+  {% include sidebar.html %}
