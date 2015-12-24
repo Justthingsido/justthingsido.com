@@ -1,0 +1,144 @@
+---
+layout: default
+---
+<style type="text/css">
+
+.article-container .content .home {
+    width: 100%;
+}
+.article-container .content .home .page-heading {
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.article-container .content .home .post-list {
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.post-list li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 0px;
+    width: 30%;
+    border-top: 1px outset white;
+    /*border-bottom: 1px outset white;*/
+
+    border-radius: 45px 45px;
+    margin: 10px;
+}
+.post-list li a {
+    color: white !important;
+    text-align: right;
+    padding-top: 15px;
+}
+.post-meta {
+    line-height: 3;
+    padding-left: 10%
+}
+.article-container .content .home .post-list .post-link {
+    padding-left: 0;
+}
+.description::-webkit-scrollbar {
+    display: none
+}
+.description {
+    margin: 0 auto;
+    text-align: justify;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px 10px;
+    height: 250px;
+    overflow: auto;
+}
+.continue {
+    padding-right: 10%;
+}
+@media screen and (max-width: 674px) {
+    .post-list li {
+        width: 45%;
+    }
+    .post-meta {
+        float: left;
+    }
+    description {
+        text-align: left;
+    }
+    a {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .post-list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+        width: 100%;
+    }
+    .post-list li {
+        width: 100% !important;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+}
+</style>
+<div class="home">
+
+  <h1 class="page-heading">Latest Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+          <description>{{ post.excerpt }}</description>
+        {% else %}
+          <description>{{ post.content }}</description>
+        {% endif %}
+        <a href="{{ post.url | prepend: site.baseurl }}"> Continue reading...</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+    <p class="rss-subscribe"> Subscribe  <a href="{{ "/feed.xml" | prepend: site.baseurl }}"> via RSS <img src="{{ site.baseurl }}/assets/img/feed-icon.png" alt="feed-icon" /> </a></p>
+</div>
