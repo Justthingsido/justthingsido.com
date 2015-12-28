@@ -1,0 +1,45 @@
+---
+layout: default
+permalink: /404.shtml
+tittle: 404
+---
+  <style>
+
+  .Error-404 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+    h1 {
+      color: #000;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 500%
+    }
+
+    h3 {
+      text-align: center;
+      padding: 20px
+    }
+
+    h5 {
+      padding: 50px;
+      text-align: center;
+      font-size: 100%
+    }
+  </style>
+  <script type="text/javascript">
+    window.setTimeout(function() {
+      window.location.href = '/';
+    }, 5000);
+  </script>
+  <div class="Error-404">
+    <h1>404</h1>
+    <h1> Page Not Found</h1>
+    <h3> It's not you, It's us</h3>
+    <h5>You will be redirected back to our home page in 5 seconds.....</h5>
+    </br>
+  </div>
