@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
     {% include head.html %}
-    {% include jade/addons/google-analytics.html %}
-  </head>
+
   <body>{% include header.html %}
     <div class="article-container">
       <div class="content">{{ content }}</div>
@@ -14,5 +12,6 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.1.10.2.min.js"><\/script>')</script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>
+    {% include jade/addons/google-analytics.html %}
   </body>
 </html>
