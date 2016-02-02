@@ -2,11 +2,13 @@
 author:
   - name: Guillermo Remache
     email: guillermo@justthingsido
-    url: justthingsido.com
+    url: http://justthingsido.com
 
 
 name: Guillermo Remache
 email: guillermo@justthingsido.com
+
+development: false ##or FALSE for production
 
 ga: UA-64098106-1
 title: Just Things I Do
@@ -23,12 +25,10 @@ permalink: pretty
 
 # Build settings
 markdown: kramdown
-# Build settings
-markdown: kramdown
 gems:
   # - octopress-minify-html
-  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-sitemap
 
 
 highlighter: rouge
