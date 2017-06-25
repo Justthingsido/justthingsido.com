@@ -2,7 +2,7 @@
 author:
   - name: Guillermo Remache
     email: guillermo@justthingsido
-    url: http://justthingsido.com
+    url: https://justthingsido.com
 
 
 name: Guillermo Remache
@@ -17,7 +17,7 @@ description: >
   If there is something i have not done yet, then it is next on my list. If there is something I do not know,
   then that will be the next thing I learn.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://justthingsido.com" # the base hostname & protocol for your site
+url: "https://justthingsido.com" # the base hostname & protocol for your site
 twitter_username: GRemache93
 github_username:  justthingsido
 

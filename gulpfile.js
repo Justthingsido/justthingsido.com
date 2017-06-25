@@ -51,7 +51,7 @@ var onError     = function(err) {
 gulp.task('jekyll-build', function (done) {
     bs.notify('Running jekyll-build');
     // return cp.spawn('jekyll.bat', ['build','--incremental'], {stdio: 'inherit'})
-    return cp.spawn('jekyll.bat', ['build'], {stdio: 'inherit'})
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 

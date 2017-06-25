@@ -7,7 +7,6 @@ categories: Articles
 thumbnail:
 ---
 
-My happiest
 
 I am at my happiest :
 
