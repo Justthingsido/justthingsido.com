@@ -1,0 +1,37 @@
+footer
+  // background: black
+  // background-image: url("/assets/img/header/230H.jpg")
+  // background-size: cover
+  // background-position: bottom
+  color: $white !important
+  position: fixed
+  bottom: 0
+  z-index: -1
+  width: calc(100% - 276px)
+  height: 250px
+  // display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+
+.footerShow
+  display: flex !important
+  +transition6
+
+.footerShowBuss
+  +transition6
+
+#mc-embedded-subscribe-form > input.submit-button
+  color: white
+
+#mce-EMAIL
+  padding: 8px
+
+#mc-embedded-subscribe-form
+  padding: 10px 0
+
+@media (max-width: 960px)
+  footer
+    width: 100% !important
+    background-color: $black-bg

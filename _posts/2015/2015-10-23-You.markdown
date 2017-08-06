@@ -2,9 +2,11 @@
 layout: post
 title:  "You"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2015-10-23
 categories: Articles
-excerpt: I am not sure if you could ever imagine how much I struggled this week, even I am not sure how I managed to get by and still be able to do the things I had to do. Even now, I am still not sure if what I am doing is the right thing to do.
+thumbnail: you.jpg
+
 
 ---
 

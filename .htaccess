@@ -811,7 +811,31 @@ ServerSignature Off
 # to `off`, also from rewriting other resources.
 #
 # https://developers.google.com/speed/pagespeed/module/configuration#notransform
+    # ModPagespeed on
+    # ModPagespeedEnableFilters make_google_analytics_async
+<IfModule pagespeed_module>
+  ModPagespeed on
+  ModPagespeedEnableFilters make_google_analytics_async
+  ModPagespeedEnableFilters extend_cache
+  ModPagespeedRewriteLevel PassThrough
+  ModPagespeedEnableFilters extend_cache
+  ModPagespeedRewriteLevel CoreFilters
+  ModPagespeedEnableFilters combine_css
+  ModPagespeedEnableFilters combine_heads
+  ModPagespeedEnableFilters combine_javascript
+  ModPagespeedEnableFilters rewrite_css
+  ModPagespeedEnableFilters rewrite_javascript
+  ModPagespeedEnableFilters inline_css
+  ModPagespeedEnableFilters inline_javascript
+  ModPagespeedEnableFilters rewrite_images
+  ModPagespeedEnableFilters inline_images
+  ModPagespeedEnableFilters make_google_analytics_async
+  ModPagespeedEnableFilters move_css_above_scripts
+  ModPagespeedEnableFilters move_css_to_head
+  ModPagespeedEnableFilters sprite_images
+  ModPagespeedEnableFilters lazyload_images
 
+</IfModule>
 # <IfModule mod_headers.c>
 #     Header merge Cache-Control "no-transform"
 # </IfModule>

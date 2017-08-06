@@ -2,16 +2,18 @@
 layout: post
 title:  "You Are Here"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2015-07-11
 categories: Articles
+thumbnail: youarehere.jpg
 ---
 
 Once again, here you are.
 
 I wonder how long did it to pass before I met you again, it's has been an eternity for me.
 
-Can you imagine how long I had to wait? To me, every second without you felt like forever.  
-I used to say that I wanted to live forever,  
+Can you imagine how long I had to wait? To me, every second without you felt like forever.
+I used to say that I wanted to live forever,
 it was such a childish dream,
 now I realize that if I could live forever and you weren't there, I wouldn't be able to live without you.
 

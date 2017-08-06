@@ -2,9 +2,10 @@
 layout: post
 title:  "When We First Met"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2015-07-05
 categories: Articles
-thumbnail: post-1.jpg
+thumbnail: club.jpg
 ---
 
 

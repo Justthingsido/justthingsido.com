@@ -2,9 +2,10 @@
 layout: post
 title:  "The Girl Who Gazed at the Stars"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2016-08-29 -0500
 categories: Articles
-thumbnail:
+thumbnail: girlstargazing.jpg
 ---
 
 There she was, sitting under the night sky. A sky as blue as the ocean she was surrounded by. The brightness of the night cast shadows over her as if the night was protecting her from the cold gaze of the stars. The shadows embraced her, giving her a feeling of being protected. The night sky loved her and it would do anything to protect her, it would do anything to be gazed by her.

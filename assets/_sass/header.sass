@@ -1,0 +1,241 @@
+.home
+  header
+    position: fixed
+    width: 276px
+    background: $white
+    z-index: 999
+
+    .header-position
+      display: flex
+      flex-direction: column
+      height: 100vh
+      z-index: 999
+      // position: fixed
+
+
+    .logo
+      flex-grow: 1
+      display: flex
+      margin: 0 auto
+      position: relative
+      z-index: 999
+      // align-items: center
+      img
+        +size(60px)
+        margin-top: 35px
+        margin-bottom: -35px
+        cursor: pointer
+        fill: white
+      .text
+        a
+          // top: 25%
+          color: $black !important
+          display: flex
+          padding-top: 100%
+          margin-bottom: -100%
+          span
+            font-size: 20px
+    // //Desktop navigation
+    .nav-bar
+      display: flex
+      flex-grow: 1
+      flex-direction: row
+      justify-content: center
+
+    .site-nav
+      display: flex
+      text-align: center
+
+      ul
+        list-style: none
+        display: flex
+        flex-direction: column
+        text-transform: uppercase
+        font-size: 12px
+        font-weight: bold
+        li
+          padding: 6% 0
+          a
+            color: $black
+            text-align: right
+
+            &:hover
+              color: $gray
+              background: rgba(black, 0.3)
+              text-decoration: overline
+    // styles header social links as well as mobile footer links
+    .follow
+      display: flex
+      flex-direction: column
+      align-items: center
+      a
+        color: black
+    .social-follow
+      padding: 5px 0
+      width: 100%
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      flex-direction: row
+      z-index: 1
+    .social
+      padding: 2px
+    .icon > svg
+      +size(25px)
+      border-radius: 50%
+      fill: black
+      path
+        transform-origin: center
+      &:hover
+        border-radius: 50%
+        background: black
+        fill: white
+    .icon > svg
+      align-items: center
+    .facebook-icon,
+    .instagram-icon,
+    .twitter-icon > svg
+      path
+        transform: scale(0.7)
+
+
+
+    .current
+      text-decoration: underline
+      text-transform: uppercase
+      color: $gray !important
+      font-size: 100%
+
+    .mobile-nav-toggle
+      display: none
+      +size(35px)
+      margin-right: 20px
+      align-items: center
+      cursor: pointer
+      z-index: 999
+
+
+      &:hover
+        svg
+          transition: all 1.5s cubic-bezier(.34,-1.94,.29,.33)
+          +size(100%)
+          transform: rotate(180deg)
+
+      svg
+        +size(100%)
+        path:
+          fill: white!important
+
+  //mobile-nav
+
+  .mobile-nav
+    display: none
+    position: fixed
+    top: 0
+    width: 100%
+    height: auto
+    background-color: $black
+    // top: 60px
+    // bottom: auto
+    z-index: 1
+    // box-shadow: 0 0 20px rgba(0,0,0,0.4)
+    flex-direction: row
+
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      width: 100%
+      padding-top: 60px
+      background: black
+
+    li
+      text-align: center
+      box-shadow: 0 2px 0 rgba($black,0.4)
+
+      &:last-child
+        margin-bottom: 0
+        border-bottom: 0
+
+
+    a
+      font-size: 120%
+      padding: 15px 0
+      display: flex
+      justify-content: center
+      width: 100%
+      color: $white
+      &:hover
+        background: white
+        color: $orange
+
+.mobile-nav-toggle:checked + .nav-bar
+  display: flex
+
+@media (max-width: 960px)
+  .home-content
+    margin: 0
+  .home
+    header
+      background: transparent
+      width: 100%
+      transition: all .5s ease-in-out
+
+      .header-position
+        width: auto
+        background: transparent
+        width: 100%
+        height: 60px
+        top: 0
+        left: auto
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        transition: all .5s ease-in-out
+
+        .logo
+          padding-left: 25px
+          .text
+            font-size: 18px
+            a
+              color: white !important
+              display: block
+              margin: 0
+              padding: 0
+
+      .extraLink
+        display: none
+
+      .nav-bar,
+        display: none
+
+      .logo > svg
+        +size(40px)
+        padding-left: 0px
+        fill: black
+        z-index: 999
+
+      .icon > svg
+        +size(25px)
+        border-radius: 50%
+        fill: white
+        path
+          transform-origin: center
+        &:hover
+          border-radius: 50%
+          background: white
+          fill: black
+      .social-follow
+        padding-right: 20px
+      .social
+        padding: 5px
+      .mobile-nav-toggle
+        display: block
+        z-index: 10
+        svg
+          path
+            fill: white
+.toggle
+  transform: translateY(0px)
+  +transition6

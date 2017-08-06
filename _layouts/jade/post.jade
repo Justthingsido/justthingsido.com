@@ -1,38 +1,45 @@
-//output:../post.html
-.post
-  .post-header
-    h2.post-title{{ page.title }}
-    p.post-meta{{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}   
+//- Render front matter without extra line caused by gulp-jade pretty
+| ---
+| layout: default
+| ---
+| 
+section.posts
+	.section-wrapper
+		.section-content
+			.content-wrapper 
+				article.post('itemscope' itemtype='http://schema.org/BlogPosting')
+					header.post-header.post-img(style="background-image: url(/assets/img/posts/post-header/{{page.thumbnail}})")
+						h1.post-title.animated.fadeInLeft(itemprop='name headline') {{ page.title }}
+						|     
+						p.post-meta
+							time( datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished") {{ page.date | date: "%b %-d, %Y" }}
+							| 
+							| {% if page.author %} 
+							span.separator | 
+							span(itemprop='author' 'itemscope' itemtype='http://schema.org/Person')
+								span(itemprop='name') by {{ page.author }}
+							| 
+							| {% endif %}
+					.post-content(itemprop='articleBody')
+						| 
+						| {{ content }}
 
-  .post-content    
-    {{ content }}
-    
-  .post-navigation
-    .clear &nbsp;
-    |         
-    .left
-      | {% if page.previous.url %}
-      a(href='{{page.previous.url}}', title='Previous Post:\
-      {{page.previous.title}}') &laquo; {{page.previous.title}}
-      |         {% endif %}
-    .center-line |        
-    .right
-      | {% if page.next.url %}
-      a(href='{{page.next.url}}', title='next Post:\
-      {{page.next.title}}') {{page.next.title}} &raquo; 
-      |         {% endif %}
-    |         
-    .clear &nbsp;
-    
-    
-  .share-links
-    
-    {% include jade/addons/share-buttons.html %}    
-      
-  .comments-section
+					.post-navigation
+						.clear &nbsp;
+						|         
+						.left
+							| {% if page.previous.url %}
+							a(href='{{page.previous.url}}', title='Previous Post:\
+							{{page.previous.title}}') &laquo; {{page.previous.title}}
+							|         {% endif %}
+						.center-line |        
+						.right
+							| {% if page.next.url %}
+							a(href='{{page.next.url}}', title='next Post:\
+							{{page.next.title}}') {{page.next.title}} &raquo; 
+							|         {% endif %}
+						|         
+						.clear &nbsp;
 
-    {% include jade/addons/disqus-comments.html %}
-    
-.sidebar
-  
-  {% include sidebar.html %}
+					.comments-section
+						{% include jade/addons/disqus-comments.html %}

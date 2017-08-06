@@ -1,0 +1,71 @@
+section.posts
+	background: white
+	.section-wrapper
+		.section-content
+			.content-wrapper
+				article.post
+					font-family: $article-font!important
+					.post-img
+						background-size: 100vw 100vh
+						background-repeat: no-repeat
+						// background-size:	auto100%
+					header.post-header
+						position: relative!important
+						width: 100%
+						height: 100vh
+						display: flex
+						justify-content: center
+						flex-direction: column
+						align-items: center
+						overflow: hidden
+						color: $white !important
+						span.separator
+							padding: 0 10px
+					h1.post-title
+						color: white
+						width: 98%
+					// 	p.post-meta
+					// 		time
+					// 		span
+					// 			span
+					.post-content
+						margin: 0 auto
+						// max-width: 98%
+						max-width: 800px
+						padding-top: 25px
+						text-align: left
+						z-index: 999
+						p
+							position: relative
+							font-family: inherit
+						// line-height: 5px
+						//
+					.post-navigation
+								display: flex
+								justify-content: space-between
+								width: 100%
+								padding: 10px 0
+								border-top: 1px solid $gray
+
+
+								a
+									color: $black !important
+
+								.right,
+								.left
+									width: 50%
+									text-align: center
+
+									&:hover
+										a
+											color: #0074D9 !important
+											text-transform: uppercase
+					.comments-section
+						padding-top: 15px
+						border-top: 1px solid $gray
+						width: 960px
+						margin: 0 auto
+
+@media (max-width: 960px)
+	.comments-section
+		width: 960px

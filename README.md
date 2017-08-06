@@ -1,2 +1,1 @@
-# justthingsido.com
-Source file of justthingsido.com blog
+# jtido 2.0

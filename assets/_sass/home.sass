@@ -1,0 +1,71 @@
+.home
+  display: flex
+  background: black
+  // image: url(/assets/img/background.png)
+  flex-direction: row
+  // background-color: $black
+  background-image: url("/assets/img/header/230H.jpg")
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  background-position: right
+
+.home-content
+  +transition6
+  position: relative
+  // top depends on height of header
+  // top: 80px
+  // Testing Fixed header and footer
+  height: auto
+  //change width to 100% depending if there is a sidebar or not
+  // width: 100%
+  // margin-bottom: 60px
+  // background: $white
+  z-index: 1
+  width: 100%
+  margin-left: 276px
+  text-align: center
+
+
+.home-sections
+  margin: 0 auto
+  max-width: 100vw
+  margin-bottom: 250px
+  z-index: 99999
+
+//
+// section
+//   display: flex
+
+
+
+.section-wrapper
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+
+
+.section-content
+  width: 100%
+  margin: auto auto
+
+
+.content-wrapper
+  width: 100%
+
+
+@media screen and (max-width: 640px)
+  section
+    .section-wrapper
+      margin: 0
+
+
+
+
+//hide scroll bar
+::-webkit-scrollbar
+  display: none
+
+html
+  -ms-overflow-style: none

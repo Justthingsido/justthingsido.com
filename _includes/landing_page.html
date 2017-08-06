@@ -1,0 +1,27 @@
+
+<section class="landing">
+  <div class="section-wrapper">
+    <div class="section-content">
+      <div class="content-wrapper">
+        <div class="header-content animated fadeInUp">
+          <h1 class="page-title">Just Things I Do</h1>
+          <blockquote><em>Whenever Life Makes you Waver, always pick the hardest route. That is the most wonderful way to live.</em><br><span class="footer">- Unknown</span></blockquote>
+        </div>
+        <div class="body-content">
+          <div class="container">           
+            <section id="pinBoot">
+                            
+              {% for post in site.posts %}
+              <article class="white-panel">{% if post.thumbnail%}<img src="/assets/img/posts/thumbnails/{{post.thumbnail}}" alt="" class="thumbnail">{%else%}<img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2015/02/photo-1433815632174-4a168ec11e73-uai-480x320.jpg" alt="" class="thumbnail">{% endif %}
+                <div class="overlay">
+                  <h1><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h1>
+                  <div class="author">{% if post.author-avatar%}<img src="/assets/img/posts/avatars/{{post.author-avatar}}" class="author-avatar">{% endif %}<span class="author-name">by {{post.author}}</span></div>
+                </div>
+              </article>{% endfor %}
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

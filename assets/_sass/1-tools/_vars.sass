@@ -1,0 +1,149 @@
+//
+// Some Useful color Vars via http://clrs.cc/
+//
+
+// Cool
+$aqua:  #7FDBFF
+$blue:  #0074D9
+$navy:  #001F3F
+$teal:  #39CCCC
+$green: #2ECC40
+$olive: #3D9970
+$lime:  #01FF70
+
+
+// Warm
+$yellow:  #FFDC00
+$orange:  #FF851B
+$red:     #FF4136
+$fuchsia: #F012BE
+$purple:  #B10DC9
+$maroon:  #85144B
+
+
+// Gray Scale
+$white:  #fff
+$silver: #ddd
+$gray:   #aaa
+$black:  rgba(1,1,1,1)
+
+$primary-color: $white
+$text-color: black
+$accent-color: #BD5248
+$bg-color: $black
+$link-color: $accent-color
+$button-color: #417280
+$selection-color: #FFF498
+// $bg-color: #FFE4E1
+
+$black-bg: rgba($bg-color, 0.6)
+$accent-bg: rgba($accent-color, 0.9)
+$accent-bg5: rgba($accent-color, 0.5)
+//
+// Add whatever variables you would like made available to the whole app
+//Font Variables
+
+// $menu-font: 'Aldrich', sans-serif
+// $title-font: 'Josefin Slab', serif
+// $text-font: 'Alegreya', serif
+
+
+$menu-font: 'Raleway', sans-serif
+$title-font: 'Josefin Slab', serif
+$text-font: 'Raleway', serif
+$thin-bold: 'Raleway', sans-serif
+$article-font: 'Garamond', sans-serif
+
+//mixings
+@mixin menu-bg
+  background: $black-bg !important
+
+//landing Title Color
+$ltcolor: $primary-color
+
+//transition .6s
+@mixin transition6
+  transition: .4s ease-in-out
+
+@mixin transition2
+  transition: .2s ease-in-out
+
+//--------------------------------
+// buttons
+//--------------------------------
+//Call to action
+
+@mixin call-to-action
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  font-family: $menu-font
+  .buttons
+    display: flex
+  a
+    flex: 1
+    margin: 0 5px
+    padding: 15px
+    height: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 100%
+    font-weight: bold
+    position: relative
+    +button-in-brackets
+    color: $accent-color
+    border: 1px solid $text-color
+    +transition6
+    text-decoration: none
+    text-transform: none
+    &:hover
+      background: $accent-color
+      color: $primary-color !important
+      border: none
+      padding: 15px
+      +transition6
+
+/*  add border to the buttons for this to work
+  ex..
+          .button1
+            background: $accent-color
+            color: $primary-color
+            border: none
+          .button2
+            border: 1px solid $text-color
+          ....
+  */
+@mixin button-in-brackets
+  &:after,
+  &:before
+    background: $primary-color
+    content: " "
+    height: 1px
+    left: 5px
+    right: 5px
+    z-index: 1
+    position: absolute
+    bottom: -1px
+  &::after
+    top: -1px
+  &::before
+    bottom: -1px
+//--------------------------------
+//--------------------------------
+//--------------------------------
+
+//About section Background image overlay
+$linear-gradient: linear-gradient(rgba($bg-color, 0.6) ,rgba($bg-color, 0.6))
+$linear-gradient2: linear-gradient(rgba($bg-color, 0.2) ,rgba($bg-color, 0.2))
+//linear-gradient(rgba($accent-color, 0.7), rgba($accent-color, 0.7))
+
+//--------------------------------
+//h2 tags
+//--------------------------------
+
+@mixin section-title
+  text-align: center
+  padding: 15px 0
+  color: $accent-color
+  font-weight: normal

@@ -2,9 +2,10 @@
 layout: post
 title:  "My Happiest"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2016-05-19 -0500
 categories: Articles
-thumbnail:
+thumbnail: myhappiest.jpg
 ---
 
 

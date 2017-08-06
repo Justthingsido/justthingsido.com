@@ -1,21 +1,16 @@
 
-<div class="footer">
-  <div class="baner-content">
-    <div style="background-image: url({{ site.baseurl }}/assets/img/header/58H.jpg)" class="banner">
-      <div class="container">
-        <div class="logo"><img src="{{ site.baseurl }}/assets/img/header/logo.png" alt="JTIDo"></div>
-      </div>
-      <h1 class="title"> <a href="{{ site.baseurl }}/">{{ site.data.settings.title }}</a></h1><em class="kicker">"One day I will find the right words, and they will be simple."
-        <p class="kicker-author"><em>- Jack Kerouac</em></p></em>
-    </div>
+<footer>
+  <div class="subscribe">
+    <p class="subscribe-banner">Sign up with your email address to receive news and updates.</p>
+    <form id="mc-embedded-subscribe-form" action="//justthingsido.us11.list-manage.com/subscribe/post?u=d55e0ead339546630d0a7fb63&amp;id=7494ccad9d" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="validate">
+      <input id="mce-EMAIL" type="email" placeholder=" Email Address" value="" name="EMAIL" class="required email">
+      <input type="submit" class="submit-button">
+    </form>
+    <p class="subscribe-banner"> No spam! Promise :)                  </p>
   </div>
-</div>
-<div class="subscribe">
-  <p class="subscribe-banner">Sign up with your email address to receive news and updates.</p>
-  <form id="mc-embedded-subscribe-form" action="//justthingsido.us11.list-manage.com/subscribe/post?u=d55e0ead339546630d0a7fb63&amp;id=7494ccad9d" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="validate">
-    <input id="mce-EMAIL" type="email" placeholder=" Email Address" value="" name="EMAIL" class="required email">
-    <input type="submit" class="submit-button">
-  </form>
-  <p class="subscribe-banner"> No spam! Promise :)                  </p>
-</div>
-<div class="copyright"><p>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> &middot;<a href="{{ site.url }}"> {{ site.data.settings.title }}</a></p></div>
+  <div class="copyright">
+    <p>Copyright &copy; 
+      <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> &nbsp; &middot; &nbsp;<a href="{{ site.url }}"> {{ site.title }}</a>
+    </p>
+  </div>
+</footer>

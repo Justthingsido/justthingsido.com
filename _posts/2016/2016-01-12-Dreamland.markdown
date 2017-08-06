@@ -2,9 +2,10 @@
 layout: post
 title:  "Dreamland"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2016-01-12 -0500
 categories: Articles
-thumbnail:
+thumbnail: dreamland.jpg
 ---
 
 The idea of such a place is intriguing as it makes you wish you could go and stay there forever. In my case sometimes I think I am living in a world of dreams because she is always next to me.

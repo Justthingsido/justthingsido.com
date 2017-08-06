@@ -1,22 +1,16 @@
-//output:../default.html
-
 doctype html
-html(lang="en-US")
-    head
-        {% include head.html %}
-        {% include jade/addons/google-analytics.html %}
-    body
-        {% include header.html %}
-        
-        .article-container
-          .content
-            | {{ content }}
-            
-        {% include footer.html %}
-        script(src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js")
-        script(src="{{ site.baseurl }}/assets/js/scripts.min.js")
-        link(href='https://fonts.googleapis.com/css?family=EB+Garamond', rel='stylesheet', type='text/css')
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery.1.10.2.min.js"><\/script>')</script>
-        <!-- Place this tag in your head or just before your close body tag. -->
-        script(src='https://apis.google.com/js/platform.js', async='', defer='')
+html(lang="en")
+	| {% include head.html %}
+	body
+		.home 
+			| {% include header.html %}
+			.home-content
+				.home-sections 
+					//- animated fadeInRight
+					//- Content from index, contact, about, etc.
+					| {{ content }}
+				| 
+				//- {% include share.html %}
+				| 
+				| {% include footer.html %}
+			| {% include body-links.html %}

@@ -2,8 +2,10 @@
 layout: post
 title:  "Wonder"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2015-07-09
 categories: Articles
+thumbnail: wonder3.jpg
 ---
 
 I wonder
@@ -97,6 +99,9 @@ because you do.
 <style>
   p{
       text-align: center
+  }
+  .post-content{
+    line-height: 10px;
   }
 
 </style>

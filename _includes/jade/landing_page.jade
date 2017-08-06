@@ -1,0 +1,35 @@
+section.landing
+	.section-wrapper
+		.section-content
+			.content-wrapper
+				.header-content.animated.fadeInUp
+					h1.page-title Just Things I Do
+					blockquote
+						em Whenever Life Makes you Waver, always pick the hardest route. That is the most wonderful way to live.
+						br
+						span.footer - Unknown
+				.body-content
+					.container            
+						section#pinBoot               
+							|{% for post in site.posts %}
+							article.white-panel
+								{% if post.thumbnail%}
+								img.thumbnail(src="/assets/img/posts/thumbnails/{{post.thumbnail}}" alt="")
+								{%else%}
+								img.thumbnail(src='http://cdn.undsgn.com/uncode/wp-content/uploads/2015/02/photo-1433815632174-4a168ec11e73-uai-480x320.jpg', alt='')
+								{% endif %}
+								.overlay
+									h1
+										a.post-link(href="{{ post.url | prepend: site.baseurl }}"){{ post.title }}
+									.author
+										{% if post.author-avatar%}
+										img.author-avatar(src="/assets/img/posts/avatars/{{post.author-avatar}}")
+										{% endif %}
+										span.author-name by {{post.author}}
+									//- span.post-meta {{ post.date | date: "%b %-d, %Y" }}
+									//- | {% if post.excerpt %}
+									//- p {{ post.excerpt }}
+									//- | {% else %}
+									//- p {{ post.content }}
+									//- | {% endif %}
+							|{% endfor %}

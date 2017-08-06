@@ -1,25 +1,50 @@
 
-<div class="mobile-nav is-open">
-  <div class="nav-links"><a href="/">home</a>{% for page in site.pages %}
-    {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">
-      {{ page.title }}
-      {% endif %}</a>{% endfor %}
+<header class="header animated fadeInDown">
+  <div class="mobile-nav">{% if site.data.assets.anchor-tags%}
+    <ul>{% for anchor in site.data.assets.anchor-tags %}
+      <li><a href="/{{ anchor.tag }}">{{ anchor.link }}</a></li>{% endfor %}
+    </ul>{% endif %}
   </div>
-</div>
-<div class="header">
-  <div class="container">
-    <div class="logo"><a href="/"><img src="{{ site.baseurl }}/assets/img/header/logo.png" alt="JTIDo"></a></div>
-    <div class="nav-links"><a href="/">home</a>{% for page in site.pages %}
-      {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">
-        {{ page.title }}
-        {% endif %}</a>{% endfor %}
+  <div itemscope itemtype="http://schema.org/LocalBusiness" class="header-position">
+    <div class="logo">
+      <div class="text"><a itemscope itemtype="http://schema.org/LocalBusiness" href="/"><span itemprop="name">{{ site.title }}</span></a></div>
     </div>
-    <div class="mobile-nav-toggle"><span></span></div>
+    <div class="nav-bar"> 
+      <nav class="site-nav">{% if site.data.assets.anchor-tags%}
+        <ul>{% for anchor in site.data.assets.anchor-tags %}
+          <li><a href="/{{ anchor.tag }}">{{ anchor.link }}</a></li>{% endfor %}
+        </ul>{% endif %}
+      </nav>
+    </div>
+    <div class="follow-content">
+      <div class="follow"><a href="mailto:{{ site.email }}" class="extraLink email-link">+email me</a><a class="extraLink followme">+find me @</a>
+        <div class="social-follow"><a href="https://github.com/{{site.github_username}}" class="social github"><span class="icon github-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="42.6" height="42.6" viewbox="0 0 42.6 42.6" xml:space="preserve">
+                <path d="M33.1 20.9c3.3 0.3 6.7 0.6 9.4 1.4 -2.7-0.4-6-1.1-9.4-1.2 -1.4 2.8-4.2 4.1-8.1 4.4 0.4 0.9 1.2 1.3 1.4 2.7 0.3 2.2-0.5 5.4 0.3 6.8 0.4 0.7 0.9 0.7 1.3 1.3 -1 1.1-3.3-0.1-3.6-1.3 -0.5-2 0.7-5.2-0.6-6.6 0.1 2.2-0.5 5.3 0.1 7.3 0.2 0.8 0.9 1.1 0.8 1.8 -4.4 0.4-2.6-5.7-3.3-9.4 -0.7 0-0.4 1-0.4 1.4 0 3.6 0.7 8.4-3.1 8 -0.1-0.7 0.5-1 0.8-1.7 0.7-2-0.1-5 0.2-7.4 -1.5 1.1 0.2 5-0.8 6.9 -0.5 1.1-2.2 1.6-3.5 1.1 0.2-0.8 1-0.7 1.4-1.5 0.5-1.1 0-2.7 0.2-4.3 -2.7 0.5-4.8-0.1-5.8-1.8 -0.5-0.8-0.6-1.7-1.1-2.3 -0.6-0.7-1.4-0.8-1.7-1.7 3.4-0.8 3.5 3.5 6.5 3.6 0.9 0 1.4-0.3 2.3-0.5 0.2-1.1 0.8-1.9 1.5-2.4 -3.7-0.5-6.8-1.7-8.3-4.5 -3.4 0.2-6.5 0.6-9.4 1.3 2.6-1 5.9-1.3 9.3-1.4 -0.2-1.2-2-0.9-3.1-0.8C4.2 20.2 1.6 20.5 0 20.8c2.4-0.8 5.7-0.7 8.9-0.7 -1-3.1-0.6-8 1.5-9.8 -0.6-1.5-0.4-4 0.4-5.2 2.4 0.1 3.9 1.2 5.4 2.2 1.9-0.5 3.8-0.8 6.4-0.7 1.1 0.1 2.2 0.5 3 0.5 0.8-0.1 1.7-1 2.4-1.3 1-0.4 1.9-0.6 3-0.7 0.6 1.3 0.9 3.3 0.4 4.9 2.2 1.9 2.9 6.4 1.9 10.1 3.1 0.2 6.8-0.1 9.2 0.8 -2.2-0.3-5.3-0.9-8.2-0.7C33.8 20.2 33 20.1 33.1 20.9z"></path>
+              </svg></span></a><a href="https://www.linkedin.com/in/{{site.linkedin-username}}" class="social linkedin"><span class="icon linkedin-icon">
+              <svg viewbox="0 0 512 512">
+                <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"></path>
+              </svg></span></a><a href="https://www.facebook.com/Gui11e" class="social facebook"><span class="icon facebook-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="96.124" height="96.123" viewbox="0 0 96.124 96.123">
+                <path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"></path>
+              </svg></span></a><a href="https://instagram.com/guill301" class="social instagram"><span class="icon instagram-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="510" height="510" viewbox="0 0 510 510">
+                <path d="M459 0H51C22.95 0 0 22.95 0 51v408c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V51c0-28.05-22.95-51-51-51zM255 153c56.1 0 102 45.9 102 102s-45.9 102-102 102-102-45.9-102-102 45.9-102 102-102zM63.75 459C56.1 459 51 453.9 51 446.25V229.5h53.55C102 237.15 102 247.35 102 255c0 84.15 68.85 153 153 153s153-68.85 153-153c0-7.65 0-17.85-2.55-25.5H459v216.75c0 7.65-5.1 12.75-12.75 12.75H63.75zM459 114.75c0 7.65-5.1 12.75-12.75 12.75h-51c-7.65 0-12.75-5.1-12.75-12.75v-51c0-7.65 5.1-12.75 12.75-12.75h51C453.9 51 459 56.1 459 63.75v51z"></path>
+              </svg></span></a><a href="https://twitter.com/GRemache93" class="social twitter"><span class="icon twitter-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 612 612">
+                <path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z"></path>
+              </svg></span></a><a href="https://about.me/gremache93" class="social aboutme"><span class="icon aboutme-icon">
+              <svg viewbox="0 0 64 64">
+                <path d="M46.44 26.052c-2.65 0-4.113 1.954-4.427 4.08h8.892c-.244-2.022-1.673-4.08-4.463-4.08m-4.36 6.976c.457 2.23 2.304 3.8 4.884 3.8 1.396 0 3.417-.52 4.605-1.743l2.27 2.615c-2.06 2.165-5.12 2.758-7.22 2.758-5.09 0-9.06-3.662-9.06-8.894 0-4.882 3.66-8.892 8.825-8.892 4.99 0 8.684 3.837 8.684 8.893v1.466H42.08zm-12.52 6.974V29.434c0-1.882-.836-2.964-2.58-2.964-1.57 0-2.616 1.117-3.312 1.92v11.612h-4.535V29.434c0-1.882-.802-2.964-2.546-2.964-1.57 0-2.65 1.117-3.32 1.92v11.612H8.74l-.003-16.844h4.536v1.953c.768-.9 2.512-2.44 5.23-2.44 2.407 0 4.046 1.02 4.78 3.07 1.01-1.46 2.893-3.07 5.615-3.07 3.276 0 5.194 1.96 5.194 5.72v11.62H29.56z"></path>
+              </svg></span></a></div>
+      </div>
+    </div>
+    <div class="mobile-nav-toggle">
+      <svg viewbox="0 0 18 15">
+        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+      </svg>
+    </div>
   </div>
-</div>
-<div class="baner-content">
-  <div style="background-image: url({{ site.baseurl }}/assets/img/header/58H.jpg)" class="banner">
-    <h1 class="title"> <a href="{{ site.baseurl }}/">{{ site.data.settings.title }}</a></h1><em class="kicker">"There is no greater agony than bearing an untold story inside you."
-      <p class="kicker-author"><br><em>- Maya Angelou</em></p></em>
-  </div>
-</div>
+</header>

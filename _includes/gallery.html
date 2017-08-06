@@ -1,0 +1,111 @@
+
+<section class="gallery">
+  <div class="section-wrapper">
+    <div class="section-content">
+      <div hidden="" class="hidden">
+        <div class="control_holder">
+          <input id="instagram_user" type="text" value="https://instagram.com/guill301">
+        </div>
+        <div class="control_holder">
+          <input id="instagram_hashtag" type="text" value="#keeponhacking">
+        </div>
+        <div class="control_holder">
+          <select id="skin_type">
+            <option value="clean" selected="selected"></option>
+            <option value="grey"></option>
+            <option value="white"></option>
+            <option value="clean"></option>
+          </select>
+          <select id="display_mode">
+            <option value="popup" selected="selected"></option>
+            <option value="link"></option>
+          </select>
+          <select id="display_mode">
+            <input id="max_width" type="text" value="800">
+          </select>
+        </div>
+        <div class="control_holder">
+          <button onclick="callInstamax();" style="font-size: 18px;padding: 6px 12px;margin-top: 10px;background-color:white ;border: 1px solid #035786;color: white;font-family: inherit; cursor:pointer;  width: 100%;"></button>
+        </div>
+      </div>
+      <div id="instamax-demo-wrapper" class="content-wrapper"></div>
+      <div id="instamax" class="instamax">
+        <script>
+          function callInstamax() {
+          
+          	$('#instamax').empty();
+          	$(".instamax-css").remove();
+          	$(".instamax_widget_css").remove();
+          	$("#instamax").off('mouseenter','#tiles li');
+          	$("#instamax").off('mouseleave','#tiles li');
+          
+          	instagram_user=$('#instagram_user').val();
+          	instagram_hashtag=$('#instagram_hashtag').val();
+          
+          	max_width=$('#max_width').val();
+          	cover_image=$('#cover_image').val();
+          	skin_type=$('#skin_type').find(":selected").val();
+          	display_mode=$('#display_mode').find(":selected").val();
+          
+          	$("head").append('<link class="instamax-css" rel="stylesheet" href="{{site.baseurl}}/assets/css/instamax_'+skin_type+'.css"/>');
+          
+          	var widget_mode = $('#widget_mode').is(':checked')?true:false;
+          	if(widget_mode) {
+          		skin_type="clean";
+          		inner_offset=5;
+          		outer_offset=5;
+          		min_item_width=100;
+          		max_item_width=120;
+          		max_width=250;
+          		max_results=20;
+          	} else {
+          		inner_offset=30;
+          		outer_offset=30;
+          		min_item_width=200;
+          		max_item_width=300;
+          		max_results=40;
+          	}
+          
+          	instagram_user = instagram_user.trim();
+          	if(instagram_user.charAt(instagram_user.length-1)=="/") {
+          		instagram_user = instagram_user.substring(0,instagram_user.length-1);
+          	}
+          
+          	$('#instamax').instamax({
+          
+          		accessToken:"260796206.0efbe26.89a76a9668934089a2d00d928486fd26",
+          
+          		user:instagram_user,
+          		//- hashtag:[instagram_hashtag],
+          		hashtag: [
+          			"#picoftheday",
+          				"#NY", "#grid",
+          				"#keeponhacking"],
+          
+          		maxContainerWidth: max_width, //Maximum width of plugin container
+          
+          		coverImage:cover_image,
+          		skin: skin_type, //white|grey|clean
+          
+          		selectedTab:"p",
+          		alwaysUseDropdown:false,
+          		showSearchBox:false,
+          
+          		widgetMode:widget_mode,
+          		displayMode:display_mode,
+          
+          		maxResults:max_results,
+          		innerOffset:inner_offset,
+          		outerOffset:outer_offset,
+          		minItemWidth:min_item_width,
+          		maxItemWidth:max_item_width,
+          	});
+          
+          }
+          
+          callInstamax();
+        </script>
+      </div>
+    </div>
+  </div>
+</section>

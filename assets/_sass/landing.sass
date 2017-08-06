@@ -1,0 +1,91 @@
+section.landing
+  .section-wrapper
+    .section-content
+      .content-wrapper
+        display: flex
+        flex-direction: column
+        .header-content
+          height: 100vh
+          color: white
+          display: flex
+          flex-direction: column
+          justify-content: center
+          h1
+            color: white
+            margin: 0
+            padding-bottom: 20px
+
+          h1, blockquote
+            background-color: $black-bg
+        .body-content
+          display: block
+          background-color: black
+          z-index: 999
+#pinBoot
+  position: relative
+  max-width: 100%
+  width: 100%
+
+img.thumbnail
+  width: 100%
+  max-width: 100%
+  height: 100%
+  // transform: scale(1)
+  +transition6
+
+.white-panel
+  position: absolute
+  background: $black
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3)
+  padding: 0 !important
+  color: $white
+  display: flex
+  flex-direction: column
+  align-items: center
+  z-index: 999
+  overflow: hidden
+  // max-height: 400px !important
+  +transition6
+  a
+    color: white
+  &:hover
+    z-index: 3
+    +transition6
+    img.thumbnail
+      transform: scale(1.05)
+      +transition6
+      filter: brightness(.6)
+    .overlay
+      opacity: 1
+
+.overlay
+  top: 35%
+  position: absolute
+  display: flex
+  opacity: 0
+  justify-content: center
+  flex-direction: column
+  width: 90%
+  +transition6
+
+/*
+  stylize any heading tags withing white-panel below
+
+.white-panel h1
+  font-size: 1em
+
+.white-panel h1 a
+  color: $white
+/*
+  styling author-name + author-avatar
+.author
+  font-size: 12px
+  display: flex
+  justify-content: center
+  img.author-avatar
+    +size(20px)
+    border-radius: 50%
+    padding-right: 10px
+
+.white-panel:hover
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5)

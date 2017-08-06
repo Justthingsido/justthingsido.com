@@ -2,15 +2,15 @@
 layout: post
 title:  "Cheers"
 author: Guillermo Remache
+author-avatar: guillermoremache.jpg
 date:   2015-06-23
 categories: Articles
-thumbnail:
+thumbnail: cheers.jpg
 ---
 
 Cheers to those days!!
 
 <br>
-
 Cheers to those times when:
 
 Fun was in every sentence that was spoken,
@@ -28,5 +28,4 @@ When uncountable platonic loves were born,
 When countless of hearts got broken.
 
 <br>
-
 Cheers to all those times, and cheers to those to come.
